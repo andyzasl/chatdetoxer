@@ -26,9 +26,11 @@ def check_toxic(text):
     return f"Язык: {''.join(response['detectedLanguages']), {x: round(100 * response['attributeScores'][x]['spanScores'][0]['score']['value']) for x in response['attributeScores']} }"
     # return(json.dumps(response, indent=2))
 
+
 bot = Bot(token=BOT_TOKEN)
 disp = Dispatcher(bot=bot)
 logging.basicConfig(level=logging.DEBUG)
+
 
 @disp.message_handler()
 async def send_welcome(message: types.Message):
