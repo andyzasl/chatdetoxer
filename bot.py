@@ -3,7 +3,7 @@ import logging
 from aiogram import Bot, Dispatcher, executor, types
 from aiogram.dispatcher.handler import SkipHandler
 from googleapiclient import discovery
-import credentials
+from credentials import BOT_TOKEN, API_KEY
 
 
 def check_toxic(text):
